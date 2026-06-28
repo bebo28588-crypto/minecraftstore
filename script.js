@@ -395,7 +395,27 @@ document.getElementById("checkout").onclick = async () => {
 
     const totalPrice = Number(document.getElementById("total").innerText);
 
-    const response = await fetch("http://localhost:3000/checkout", {
+    const response = await fetch("https://minecraft-bot-production-b65b.up.railway.app/checkout", {
+        method: "POST",
+        headers: {
+            "Content-Type": "application/json"
+        },
+        body: JSON.stringify({
+            username: username,
+            cart: cartArray,
+            total: totalPrice
+        })
+    });
+
+    const data = await response.json();
+
+    if (data.success) {
+        alert("Ticket Created Successfully!");
+    } else {
+        alert("Something went wrong!");
+    }
+
+};
         method: "POST",
         headers: {
             "Content-Type": "application/json"
