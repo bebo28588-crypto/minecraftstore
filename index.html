@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Minecraft Store</title>
+
+<link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+<div id="login-screen">
+
+    <div class="login-box">
+
+        <h1>⛏ Minecraft Store</h1>
+
+        <input
+            type="text"
+            id="username"
+            placeholder="Username"
+        >
+
+        <input
+            type="password"
+            id="password"
+            placeholder="Password"
+        >
+
+        <button id="login-btn">
+    Login / Register
+</button>
+
+    </div>
+
+</div>    
+
+<header>
+
+<div class="logo">
+⛏ Minecraft Store
+</div>
+
+<input
+type="text"
+id="search"
+placeholder="Search item..."
+>
+
+<div id="filters"></div>
+
+<div class="cartButton">
+
+🛒
+
+<span id="cart-count">
+0
+</span>
+
+</div>
+<button id="logout-btn">Logout</button>
+
+</header>
+
+<div id="shop"></div>
+<div id="ranks"></div>
+<div id="cart">
+
+<h2>Shopping Cart</h2>
+
+<div id="cart-items">
+
+Cart is empty
+
+</div>
+
+<h3>
+
+Total :
+
+<span id="total">
+
+0
+
+</span>
+
+EGP
+
+</h3>
+
+<button id="checkout">
+
+Checkout
+
+</button>
+
+</div>
+
+<script src="products.js"></script>
+<script src="script.js"></script>
+
+</body>
+
+</html>
